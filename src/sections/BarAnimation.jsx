@@ -47,7 +47,7 @@ const BarAnimation = ({ id }) => {
     <div
       id={id}
       ref={containerRef}
-      className="relative w-full h-[100%] overflow-hidden"
+      className="relative w-full h-[80%] z-[0]"
     >
       {[...Array(barCount)].map((_, i) => (
         <div

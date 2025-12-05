@@ -12,16 +12,16 @@ const Services = ({ id }) => {
         // Animate the title on scroll
         gsap.fromTo(
             titleRef.current,
-            { y: 150, opacity: 0 },
+            { y: "50vh" },
             {
                 y: 0,
                 opacity: 1,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: titleRef.current,
-                    start: "top bottom",
-                    end: "top 20%",
-                    scrub: true,
+                    start: "top 150%",
+                    end: "top 60%",
+                    scrub: true,    
                 },
             }
         )
@@ -30,17 +30,16 @@ const Services = ({ id }) => {
         servicesRef.current.forEach((el, index) => {
             gsap.fromTo(
                 el,
-                { opacity: 0, y: 80, scale: 0.7 },
+                { y: "50vh", scale: 0.7 },
                 {
-                    opacity: 1,
                     y: 0,
                     scale: 1,
-                    ease: "power3.out",
+                    ease: "ease.out",
                     scrollTrigger: {
                         trigger: el,
-                        start: "top 80%",
-                        end: "top 20%",
-                        scrub: true,
+                        start: "top 160%",
+                        end: "top 110%",
+                        scrub: 1,
                     },
                 }
             )
