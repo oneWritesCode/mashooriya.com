@@ -3,12 +3,13 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import HeroLogo from "./components/HeroLogo";
+import Loader from "./components/Loader";
 import Hero from "./sections/Hero";
 import Numbers from "./sections/Numbers";
 import Viral from "./sections/Viral";
 import About from "./sections/About";
 import Services from "./sections/Services";
-import TeamSection from "./sections/TeamSection";
+// import TeamSection from "./sections/TeamSection";
 import Originals from "./sections/Originals";
 import Clients from "./sections/Clients";
 import BarAnimation from "./sections/BarAnimation";
@@ -18,15 +19,32 @@ gsap.registerPlugin(ScrollTrigger);
 
 const App = () => {
   const [logoColor, setLogoColor] = useState("Yellow");
+  const [isLoading, setIsLoading] = useState(true);
+
+  useEffect(() => {
+    const handleLoad = () => {
+
+      setTimeout(() => {
+        setIsLoading(false);
+      }, 300);
+    };
+
+    if (document.readyState === "complete") {
+      handleLoad();
+    } else {
+      window.addEventListener("load", handleLoad);
+      return () => window.removeEventListener("load", handleLoad);
+    }
+  }, []);
 
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,
-      lerp: 0.1,                      // Keep this balanced (0.1 is good)
-      duration: 3,                    // How long momentum lasts (1.2-2.0 seconds)
-      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), // Smooth ease-out
-      smoothWheel: true,               // Enable smooth wheel scrolling
-      wheelMultiplier: 5,              //scroll sensitivity
+      lerp: 0.5,                     
+      duration: 3,                   
+      easing: (t) => Math.min(1, 1.001 - Math.pow(2, -10 * t)), 
+      smoothWheel: true,              
+      wheelMultiplier: 3,              
     });
 
     function raf(time) {
@@ -78,13 +96,15 @@ const App = () => {
 
   return (
     <>
+      {/* <Loader isLoading={true} /> */}
+      <Loader isLoading={isLoading} />
       <HeroLogo color={logoColor} />
       <Hero id="hero" />
       <Numbers id="numbers-section" />
       <BarAnimation id="bar-section" />
       <Viral id="viral-section" />
       <About id="about-section" />
-      <TeamSection id="team-section" />
+      {/* <TeamSection id="team-section" /> */}
       <Services id="services-section" />
       <Clients id="client-section" />
       <Originals id="originals-section" />

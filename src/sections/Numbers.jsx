@@ -17,16 +17,16 @@ const Numbers = ({ id }) => {
     // Title animation
     gsap.fromTo(
       el,
-      { y: 150, opacity: 0 },
+      { y: "50vh", scale: 0.7 },
       {
         y: 0,
-        opacity: 1,
-        ease: "power3.out",
+        scale: 1,
+        ease: "ease.out",
         scrollTrigger: {
           trigger: el,
-          start: "top bottom",
-          end: "top 10%",
-          scrub: true,
+          start: "top 160%",
+          end: "top 110%",
+          scrub: 1,
         },
       },
     );
@@ -50,13 +50,12 @@ const Numbers = ({ id }) => {
         {
           scale: 1,
           rotate: i === 0 ? -6 : i === 1 ? 5 : -8,
-        
           ease: "ease.out",
           scrollTrigger: {
             trigger: el,
-            start: "top 80%",
-            end: "top 20%",
-            scrub: true,
+            start: "top 150%",
+            end: "top 60%",
+            scrub: true,  
           },
         },
       );
@@ -68,7 +67,7 @@ const Numbers = ({ id }) => {
   return (
     <div
       id={id}
-      className="bg-Yellow font-khand relative flex min-h-screen items-center justify-center p-4 sm:p-8"
+      className="relative bg-Yellow font-khand flex min-h-screen items-center justify-center p-4 sm:p-8"
     >
       <div className="relative flex h-screen w-full max-w-7xl flex-col items-center justify-center pb-10 text-center font-bold">
         {/* Title */}

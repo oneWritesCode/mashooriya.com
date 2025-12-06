@@ -13,7 +13,7 @@
     --Green: #1F9270;
 }
 
-body::-webkit-scrollbar {
+body::-webkit-scrollbar, .no-scroll::-webkit-scrollbar  {
     display: none;
 }
 

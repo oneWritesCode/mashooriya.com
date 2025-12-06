@@ -15,7 +15,6 @@ const Services = ({ id }) => {
             { y: "50vh" },
             {
                 y: 0,
-                opacity: 1,
                 ease: "power3.out",
                 scrollTrigger: {
                     trigger: titleRef.current,
