@@ -74,15 +74,16 @@ const About = ({ id }) => {
         card1Ref.current,
         { x: "-50vh", scale: 0, rotation: -20 },
         {
-          x: "0vh",
-          rotation: -4,
+          x: "5vh",
+          y: "-3vh",
+          rotation: 0,
           scale: 1,
           ease: "ease.in",
           scrollTrigger: {
             trigger: card2Ref.current,
             start: "top 150%",
-            end: "top 10%",
-            scrub: true,
+            end: "top 60%",
+            // scrub: true,
           },
         },
       );
@@ -95,14 +96,14 @@ const About = ({ id }) => {
         { x: "50vh", scale: 0, rotation: 20 },
         {
           x: "0vh",
-          rotation: 4,
+          rotation: 0,
           scale: 1,
           ease: "ease.in",
           scrollTrigger: {
             trigger: card2Ref.current,
             start: "top 150%",
-            end: "top 10%",
-            scrub: true,
+            end: "top 60%",
+            // scrub: true,
           },
         },
       );
@@ -130,7 +131,7 @@ const About = ({ id }) => {
 
   return (
     <div id={id} ref={containerRef} className="relative z-[0] w-full">
-      <div id={id} className="bg-Yellow text-Dark py-4 w-full pt-20 h-[70vh]">
+      <div id={id} className="bg-Yellow text-Dark h-[70vh] w-full py-4 pt-20">
         <div className="flex h-full w-full flex-col items-center justify-center">
           <div className="relative text-center text-[5rem] md:text-[9.5rem] lg:text-[11.5rem]">
             <h1
@@ -157,7 +158,7 @@ const About = ({ id }) => {
       </div>
 
       <div className="bg-Yellow flex h-[80vh] items-center px-4 pb-12 md:pb-20">
-        <div className="mx-auto w-full max-w-7xl">
+        <div className="mx-auto w-full">
           {/* Team Cards Container */}
           <div className="flex -translate-x-3 flex-col items-center justify-center gap-8 lg:flex-row lg:items-start lg:justify-center">
             {/* Aditya Mishra Card */}
@@ -208,10 +209,10 @@ const About = ({ id }) => {
           </div>
 
           {/* Company Description */}
-          <div className="mt-12 text-center md:mt-16 lg:mt-20">
+          <div className="mt-12 w-full text-center md:mt-16 lg:mt-20">
             <p
               ref={paragraphRef}
-              className="text-Dark mx-auto max-w-5xl px-4 text-2xl leading-[0.8] font-bold md:text-3xl lg:text-4xl"
+              className="text-Dark mx-auto w-full max-w-7xl px-4 text-2xl leading-[0.8] font-bold md:text-3xl lg:text-4xl"
             >
               MASHOORIYA FUSES MUSIC, CULTURE, AND STRATEGY TO AMPLIFY
               INDEPENDENT VOICES. WE CRAFT CAMPAIGNS THAT FEEL LIKE CULTURE

@@ -54,8 +54,8 @@ const Numbers = ({ id }) => {
           scrollTrigger: {
             trigger: el,
             start: "top 150%",
-            end: "top 10%",
-            scrub: true,  
+            end: "top 40%",
+            scrub: 1,  
           },
         },
       );
@@ -65,6 +65,7 @@ const Numbers = ({ id }) => {
   }, [id]);
 
   return (
+    <>
     <div
       id={id}
       className="relative bg-Yellow font-khand flex min-h-screen items-center justify-center p-4 sm:p-8"
@@ -95,7 +96,7 @@ const Numbers = ({ id }) => {
         {/* Tile 2 – Top left */}
         <div
           ref={tile2Ref}
-          className="bg-Green text-White absolute top-[45%] left-[20%] flex w-max rotate-[6deg] transform items-center gap-2 rounded-sm px-3 py-1 shadow-lg md:top-[17%] md:right-[15%] md:block"
+          className="bg-Green text-White absolute top-[55%] left-[20%] flex w-max rotate-[6deg] transform items-center gap-2 rounded-sm px-3 py-1 shadow-lg md:top-[18%] md:right-[15%] md:block"
         >
           <p className="pt-1 text-4xl font-extrabold md:text-5xl">50+</p>
           <p className="text-left text-lg leading-none uppercase md:text-center md:text-base">
@@ -126,7 +127,8 @@ const Numbers = ({ id }) => {
         </div>
       </div>
     </div>
-  );
+    <div className="relative bg-transparent font-khand flex min-h-[50vh] items-center justify-center p-4 sm:p-8"></div>
+    </>);
 };
 
 export default Numbers;
