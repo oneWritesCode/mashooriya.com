@@ -7,12 +7,12 @@ const Footer = ({ id }) => {
       <div className='px-[2.2rem]'>
         <img src="./workmark.svg" alt="" />
       </div>
-      <div className='flex w-full bottom-5 px-[2.2rem]  md:pb-8 font-bold text-2xl md:text-5xl'>
-        <div className='w-[50%] md:w-[40%] flex justify-between' >
+      <div className='flex w-full bottom-5 px-[2.2rem]  md:pb-8 font-bold text-2xl md:text-5xl flex-col gap-4 md:flex-row'>
+        <div className='w-full md:w-[40%] flex justify-between gap-4 md:gap-0' >
           <a href="./">INSTAGRAM</a>
           <a href="./">TWITTER</a>
         </div>
-        <div className='w-[50%] md:w-[60%] flex justify-end'>
+        <div className='w-full md:w-[60%] flex md:justify-end'>
           <a href="">LINKEDIN</a>
         </div>
       </div>

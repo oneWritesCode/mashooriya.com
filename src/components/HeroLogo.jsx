@@ -251,7 +251,7 @@ const HeroLogo = ({color}) => {
                 id="animatedLogo"
                 xmlns="http://www.w3.org/2000/svg"
                 viewBox="-100 -140 948.58 745.29"
-                className="fixed top-1/2 left-1/2 w-[500px] -translate-x-1/2 -translate-y-1/2 z-[1000]"
+                className="fixed top-1/2 left-1/2  w-[200px] sm:w-[300px] md:w-[400px] lg:w-[500px] -translate-x-1/2 -translate-y-1/2 z-[1000]"
             >
                 <g id="base">
                     <polygon 

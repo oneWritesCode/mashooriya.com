@@ -14,7 +14,7 @@ const HeroMarquee = () => {
                     gradient={false}
                     pauseOnHover={false}
                 >
-                    <div className='overflow-hidden flex items-start space-x-4 px-6 py-0 md:py-4'>
+                    <div className='overflow-hidden flex items-start space-x-4 px-6 py-0 md:py-4 sm:py-1'>
                         <span className="flex-none mt-3 text-[2.8rem] md:text-[3.8rem] lg:text-[4rem] font-khand font-extrabold text-Yellow whitespace-nowrap leading-none">
                             SHARMEELI
                         </span>

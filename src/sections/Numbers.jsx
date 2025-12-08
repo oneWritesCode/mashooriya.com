@@ -75,43 +75,14 @@ const Numbers = ({ id }) => {
           {/* Title */}
           <h1
             ref={titleRef}
-            className="text-Dark text-[5rem] leading-[0.8] font-extrabold tracking-tight uppercase sm:text-[6rem] md:text-[9rem] lg:text-[11rem]"
+            className="text-Dark text-[5rem] leading-[0.8] font-extrabold tracking-tight uppercase sm:text-[9rem] md:text-[9rem] lg:text-[11rem]"
           >
-            Numbers that
-            <br />
-            Make Major
-            <br />
-            Noiseeee!
+            Numbers that <br />  Make Major    <br /> Noiseeee!
           </h1>
 
           {/* Tile 1 – Top Right */}
-
           <NumberTitles
-            classes="bg-White text-Dark top-[44%] right-[4%] rotate-[-6deg]  md:top-[20%] md:right-[12%] "
-            number="28M+"
-            text={
-              <>
-                views <br /> across campaigns
-              </>
-            }
-            initialRotate={-10}
-            secondRotate={-6}
-          />
-          <NumberTitles
-            classes="bg-Green text-White top-[60%] left-[20%] rotate-[6deg] md:top-[20%] md:right-[15%] "
-            number="50+"
-            text={
-              <>
-                virals <br /> this year
-              </>
-            }
-            initialRotate={8}
-            secondRotate={5}
-          />
-
-          {/* Tile 3 – Bottom Left */}
-          <NumberTitles
-            classes="bg-Purple text-Dark top-[50%] left-[2%] rotate-[5deg] md:left-[15%] "
+            classes="bg-Purple text-Dark sm:top-[28%] sm:left-[2%] top-[15%] left-[2%] md:left-[20%] lg:top-[20%] lg:left-[15%] "
             number="6X"
             text={
               <>
@@ -122,10 +93,36 @@ const Numbers = ({ id }) => {
             secondRotate={-8}
           />
 
+          {/* Tile 2 – top Left */}
+          <NumberTitles
+            classes="bg-White text-Dark sm:top-[28%] sm:right-[4%] top-[23%] right-[1%] lg:top-[20%] lg:right-[9%] "
+            number="28M+"
+            text={
+              <>
+                views <br /> across campaigns
+              </>
+            }
+            initialRotate={-10}
+            secondRotate={6}
+          />
+
+          {/* Tile 3 – Bottom Left */}
+          <NumberTitles
+            classes="bg-Green text-White top-[65%] left-[10%] md:top-[25%] md:right-[15%] lg:top-[60%] lg:left-[25%]"
+            number="50+"
+            text={
+              <>
+                virals <br /> this year
+              </>
+            }
+            initialRotate={8}
+            secondRotate={5}
+          />
+
           {/* Tile 4 – Bottom Center-Right */}
 
           <NumberTitles
-            classes="bg-Dark text-Yellow top-[57%] right-[2%] rotate-[2deg] md:right-[20%] "
+            classes="bg-Dark text-Yellow top-[63%] right-[5%] md:right-[22%] lg:right-[20%] "
             number="40+"
             text={<>artists marketed</>}
             initialRotate={-6}

@@ -1,5 +1,5 @@
 import React, { useEffect, useRef } from "react";
-import DraggableCard from "../components/DraggableCard";
+import ViralSongsCard from "../components/ViralSongsCard";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 
@@ -123,20 +123,18 @@ const Viral = ({ id }) => {
       <div className="absolute top-0 right-0 z-[100] flex w-full flex-col items-center justify-center">
         <div
           ref={titleRef}
-          className="text-Dark relative top-0 left-0 z-10 flex h-screen w-[100vw] max-w-7xl flex-col justify-center px-4 text-center text-[5rem] leading-[0.75] font-bold sm:px-6 md:px-8 md:text-[9.5rem] lg:px-4 lg:text-[11.5rem]"
+          className="text-Dark relative top-0 left-0 z-10 flex h-screen w-[100vw] max-w-7xl flex-col justify-start sm:justify-center px-4 py-[28vh] text-center leading-[0.75] font-bold sm:px-6 md:px-8 text-[4rem] sm:text-[9rem] md:text-[9.5rem] lg:px-4 lg:text-[11.5rem]"
         >
           <p className="whitespace-nowrap md:whitespace-normal">THE CURRENT</p>
           <p className="whitespace-nowrap md:whitespace-normal">VIRALS AND</p>
-          <p className="whitespace-nowrap md:whitespace-normal">
-            ARTISTS POPPIN
-          </p>
+          <p className="whitespace-nowrap md:whitespace-normal">ARTISTS POPPIN</p>
         </div>
       </div>
 
       <div className="z-[1000] w-full">
         <div className="absolute inset-0 top-0 left-0 flex h-screen w-full items-center justify-center">
           <div
-            className="absolute top-0 right-0 flex items-center justify-center"
+            className="absolute top-0 right-0 flex items-end sm:p-4 p-[20vh] sm:items-center justify-center"
             style={{ width: "100%", height: "100%" }}
           >
             {cardData.map((card, index) => (
@@ -146,7 +144,7 @@ const Viral = ({ id }) => {
                 className="absolute"
                 style={{ zIndex: index + 1 }}
               >
-                <DraggableCard
+                <ViralSongsCard
                   image={card.image}
                   songName={card.songName}
                   artistName={card.artistName}

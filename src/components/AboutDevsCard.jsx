@@ -44,13 +44,13 @@ function AboutDevsCard({ dev, index }) {
       className={`relative ${dev.zIndex} ${dev.offsetClasses} transform transition-transform duration-300 hover:rotate-0`}
     >
       <div
-        className={`${dev.bg} ${dev.border} ${dev.cardRotation} w-full overflow-hidden border-4 shadow-2xl p-4`}
+        className={`${dev.bg} ${dev.border} ${dev.cardRotation} ${dev.cardClasses} w-full overflow-hidden border-4 p-2 sm:p-4`}
       >
-        <div className="relative border-4 border-black h-60 overflow-hidden md:h-100 md:w-140 md:px-1">
-          <img src={dev.image} alt={dev.name} className={`scale-150 h-full w-full`} />
+        <div className="relative border-4 border-black overflow-hidden h-50 w-80 md:h-100 md:w-140 md:px-1">
+          <img src={dev.image} alt={dev.name} className={`h-full w-full`} />
         </div>
         <div className={`${dev.bg} px-2 py-1`}>
-          <h3 className={`${dev.textColor} text-center text-6xl font-bold md:text-8xl lg:text-8xl`}>
+          <h3 className={`${dev.textColor} text-center text-4xl sm:text-6xl font-bold md:text-8xl lg:text-8xl`}>
             {dev.name.toUpperCase()}
           </h3>
         </div>

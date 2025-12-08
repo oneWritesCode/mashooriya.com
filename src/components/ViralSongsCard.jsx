@@ -1,6 +1,6 @@
 import React from "react";
 
-const DraggableCard = ({
+const ViralSongsCard = ({
   songName,
   artistName,
   image,
@@ -9,19 +9,19 @@ const DraggableCard = ({
 }) => {
   return (
     <div
-      className={`font-khand text-Dark border-Dark relative overflow-hidden px-4 py-8 text-center font-bold tracking-tight backdrop-blur-sm rotate-x-6`}
+      className={`font-khand text-Dark border-Dark relative overflow-hidden px-4 py-8 text-center font-bold tracking-tight backdrop-blur-sm `}
       style={{ backgroundColor: bgColor,
         transform: `rotate(${rotation || 0}deg)`,
 
       }}
     >
       <div className="relative w-full top-0 right-0 left-0 h-full">
-        <img src={image} alt="" className="w-[20vw]" loading="lazy" />
+        <img src={image} alt="" className="w-[40vw] sm:w[30vw] md:w-[30vw] lg:w-[20vw] " loading="lazy" />
       </div>
 
       <div className="absolute top-0 flex w-full h-full items-end justify-start  ">
         <div
-          className={`w-full p-4 ${
+          className={`w-full py-4 ${
             bgColor === "var(--Green)"
               ? "from-Green via-Green/70 to-Green/20 bg-gradient-to-t"
               : "from-Yellow via-Yellow/70 to-Yellow/20 bg-gradient-to-t"
@@ -55,4 +55,4 @@ const DraggableCard = ({
   );
 };
 
-export default DraggableCard;
+export default ViralSongsCard;

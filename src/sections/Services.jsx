@@ -56,35 +56,35 @@ const Services = ({ id }) => {
             <div className="relative font-['Khand'] uppercase flex flex-col justify-center items-center text-center">
                 <h1
                     ref={titleRef}
-                    className="text-Yellow font-bold leading-none text-[5rem] md:text-[9.5rem] lg:text-[11.5rem]  mb-[-0.90rem]"
+                    className="text-Yellow font-bold leading-none text-[5rem] md:text-[9.5rem] lg:text-[11.5rem] mb-[-0.90rem]"
                 >
                     Services
                 </h1>
 
                 <div
                     ref={addToRefs}
-                    className="bg-Dark rounded-sm text-Purple w-max px-4 py-2 pt-4 mt-2 md:mt-0 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform -rotate-2 leading-none my-[-0.5rem]"
+                    className="bg-Dark rounded-sm text-Purple w-max px-4 sm:py-2 py-6 pt-4 sm:mt-2 mt-10 md:mt-0 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform -rotate-2 leading-none my-[-0.5rem]"
                 >
                     Artist & Repertoire
                 </div>
 
                 <div
                     ref={addToRefs}
-                    className="bg-Yellow rounded-sm text-Dark w-max px-4 py-2 pt-4 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform rotate-1 leading-none my-[-0.5rem]"
+                    className="bg-Yellow rounded-sm text-Dark w-max px-4 sm:py-2 py-6 pt-4 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform rotate-1 leading-none my-[-0.5rem]"
                 >
                     Music Marketing
                 </div>
 
                 <div
                     ref={addToRefs}
-                    className="bg-Dark rounded-sm text-Purple w-max px-4 py-2 pt-4 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform -rotate-2 leading-none my-[-0.5rem]"
+                    className="bg-Dark rounded-sm text-Purple w-max px-4 sm:py-2 py-6 pt-4 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform -rotate-2 leading-none my-[-0.5rem]"
                 >
                     Artist Development
                 </div>
 
                 <div
                     ref={addToRefs}
-                    className="bg-Yellow rounded-sm text-Dark w-max px-2 py-2 pt-4 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform -rotate-4 leading-none my-[-0.5rem]"
+                    className="bg-Yellow rounded-sm text-Dark w-max px-2 sm:py-2 py-4 pt-4 font-extrabold text-4xl md:text-5xl lg:text-7xl xl:text-8xl transform -rotate-4 leading-none my-[-0.5rem]"
                 >
                     Content & Rollout Design
                 </div>
