@@ -140,7 +140,7 @@ const About = ({ id }) => {
         </div>
       </div>
 
-      <div className="bg-Yellow flex md:h-[80vh] h-screen overflow-hidden items-center px-4 pb-12 md:pb-20">
+      <div className="bg-Yellow flex md:h-[80vh] h-screen items-center px-4 pb-12 md:pb-20">
         <div className="mx-auto w-full">
           {/* Team Cards Container */}
           <div className="flex -translate-x-3 flex-col items-center justify-center gap-8 lg:flex-row lg:items-start lg:justify-center">
