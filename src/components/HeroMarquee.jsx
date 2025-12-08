@@ -5,9 +5,9 @@ const HeroMarquee = () => {
     return (
         <>
             <div className="pointer-events-none absolute bottom-0 left-0 right-0 z-[5] flex flex-col justify-end w-full">
-                <div className="absolute -top-32 right-0 pr-6 text-Yellow font-khand font-medium text-2xl md:text-3xl tracking-tight">
+                {/* <div className="absolute -top-32 right-0 pr-6 text-Yellow font-khand font-medium text-2xl md:text-3xl tracking-tight">
                     <p className="uppercase">CURRENT HITS</p>
-                </div>
+                </div> */}
                 <Marquee
                     autoFill={true}
                     speed={60}

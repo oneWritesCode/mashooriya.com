@@ -1,0 +1,62 @@
+import React, { useEffect, useRef } from "react";
+import { gsap } from "gsap";
+import { ScrollTrigger } from "gsap/ScrollTrigger";
+
+gsap.registerPlugin(ScrollTrigger);
+
+/**
+ * Single developer card with scroll-in animation.
+ */
+function AboutDevsCard({ dev, index }) {
+  const cardRef = useRef(null);
+
+  useEffect(() => {
+    const fromLeft = index % 2 === 0;
+
+    if (cardRef.current) {
+      gsap.fromTo(
+        cardRef.current,
+        {
+          x: fromLeft ? "-50vh" : "50vh",
+          scale: 0,
+          rotation: fromLeft ? -12 : 12,
+        },
+        {
+          x: fromLeft ? " " : "-5vh",
+          y: fromLeft ? "-3vh" : "-1vh",
+          rotation: 0,
+          scale: 1,
+          ease: "ease",
+          scrollTrigger: {
+            trigger: cardRef.current,
+            start: "top 150%",
+            end: "top 80%",
+            scrub:1,
+          },
+        },
+      );
+    }
+  }, [index]);
+
+  return (
+    <div
+      ref={cardRef}
+      className={`relative ${dev.zIndex} ${dev.offsetClasses} transform transition-transform duration-300 hover:rotate-0`}
+    >
+      <div
+        className={`${dev.bg} ${dev.border} ${dev.cardRotation} w-full overflow-hidden border-4 shadow-2xl p-4`}
+      >
+        <div className="relative border-4 border-black h-60 overflow-hidden md:h-100 md:w-140 md:px-1">
+          <img src={dev.image} alt={dev.name} className={`scale-150 h-full w-full`} />
+        </div>
+        <div className={`${dev.bg} px-2 py-1`}>
+          <h3 className={`${dev.textColor} text-center text-6xl font-bold md:text-8xl lg:text-8xl`}>
+            {dev.name.toUpperCase()}
+          </h3>
+        </div>
+      </div>
+    </div>
+  );
+}
+
+export default AboutDevsCard;

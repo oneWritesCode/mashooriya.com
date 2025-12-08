@@ -1,6 +1,7 @@
 import React, { useEffect, useRef } from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
+import AboutDevsCard from "../components/AboutDevsCard";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -8,9 +9,30 @@ const About = ({ id }) => {
   const headingRefs = useRef([]);
   const buttonRef = useRef(null);
   const containerRef = useRef(null);
-  const card1Ref = useRef(null);
-  const card2Ref = useRef(null);
   const paragraphRef = useRef(null);
+
+  const devs = [
+    {
+      name: "Aditya Mishra",
+      image: "/About/Aditya_Mishra.png",
+      bg: "bg-Purple",
+      border: "border-Dark",
+      cardRotation: "-rotate-3",
+      textColor: "text-Dark",
+      zIndex: "z-20",
+      offsetClasses: "lg:-rotate-2",
+    },
+    {
+      name: "Anmol Dhand",
+      image: "/About/Anmol_Dhand.png",
+      bg: "bg-Green",
+      border: "border-Dark",
+      cardRotation: "rotate-3",
+      textColor: "text-Yellow",
+      zIndex: "z-10",
+      offsetClasses: "lg:rotate-2",
+    },
+  ];
 
   // helper to add refs
   const addToRefs = (el) => {
@@ -67,47 +89,46 @@ const About = ({ id }) => {
         },
       );
     }
+   // Animate the first card (Aditya Mishra)
+  //  if (card1Ref.current) {
+  //   gsap.fromTo(
+  //     card1Ref.current,
+  //     { x: "-50vh", scale: 0, rotation: -20 },
+  //     {
+  //       x: "5vh",
+  //       y: "-3vh",
+  //       rotation: 0,
+  //       scale: 1,
+  //       ease: "ease.in",
+  //       scrollTrigger: {
+  //         trigger: card2Ref.current,
+  //         start: "top 150%",
+  //         end: "top 60%",
+  //         // scrub: true,
+  //       },
+  //     },
+  //   );
+  // }
 
-    // Animate the first card (Aditya Mishra)
-    if (card1Ref.current) {
-      gsap.fromTo(
-        card1Ref.current,
-        { x: "-50vh", scale: 0, rotation: -20 },
-        {
-          x: "5vh",
-          y: "-3vh",
-          rotation: 0,
-          scale: 1,
-          ease: "ease.in",
-          scrollTrigger: {
-            trigger: card2Ref.current,
-            start: "top 150%",
-            end: "top 60%",
-            // scrub: true,
-          },
-        },
-      );
-    }
-
-    // Animate the second card (Anmol Dhand)
-    if (card2Ref.current) {
-      gsap.fromTo(
-        card2Ref.current,
-        { x: "50vh", scale: 0, rotation: 20 },
-        {
-          x: "0vh",
-          rotation: 0,
-          scale: 1,
-          ease: "ease.in",
-          scrollTrigger: {
-            trigger: card2Ref.current,
-            start: "top 150%",
-            end: "top 60%",
-            // scrub: true,
-          },
-        },
-      );
-    }
+  // Animate the second card (Anmol Dhand)
+  // if (card2Ref.current) {
+  //   gsap.fromTo(
+  //     card2Ref.current,
+  //     { x: "50vh", scale: 0, rotation: 20 },
+  //     {
+  //       x: "0vh",
+  //       rotation: 0,
+  //       scale: 1,
+  //       ease: "ease.in",
+  //       scrollTrigger: {
+  //         trigger: card2Ref.current,
+  //         start: "top 150%",
+  //         end: "top 60%",
+  //         // scrub: true,
+  //       },
+  //     },
+  //   );
+  // }
 
     // Animate the paragraph
     if (paragraphRef.current) {
@@ -130,8 +151,8 @@ const About = ({ id }) => {
   }, []);
 
   return (
-    <div id={id} ref={containerRef} className="relative z-[0] w-full">
-      <div id={id} className="bg-Yellow text-Dark h-[70vh] w-full py-4 pt-20">
+    <div id={id} ref={containerRef} className="relative z-0 w-full">
+      <div id={id} className="bg-Yellow text-Dark h-screen w-full py-4 pt-20">
         <div className="flex h-full w-full flex-col items-center justify-center">
           <div className="relative text-center text-[5rem] md:text-[9.5rem] lg:text-[11.5rem]">
             <h1
@@ -146,9 +167,9 @@ const About = ({ id }) => {
             <div className="relative">
               <div
                 ref={buttonRef}
-                className="absolute right-0 -bottom-8 -rotate-6 rounded-lg p-2 md:-right-4 md:-bottom-10"
+                className="absolute right-0 -bottom-8 -rotate-6 p-2 md:-right-4 md:-bottom-10"
               >
-                <div className="bg-Dark/95 text-Yellow transform rounded-lg border-2 px-2 py-1 text-3xl font-bold md:px-2 md:text-2xl lg:text-6xl">
+                <div className="bg-Dark/95 text-Yellow transform border-2 px-2 py-1 text-3xl font-bold md:px-2 md:text-2xl lg:text-6xl">
                   <span className="flex pt-2">ABOUT US</span>
                 </div>
               </div>
@@ -161,51 +182,10 @@ const About = ({ id }) => {
         <div className="mx-auto w-full">
           {/* Team Cards Container */}
           <div className="flex -translate-x-3 flex-col items-center justify-center gap-8 lg:flex-row lg:items-start lg:justify-center">
-            {/* Aditya Mishra Card */}
-            <div
-              ref={card1Ref}
-              className="relative z-2 translate-y-12 transform transition-transform duration-300 hover:rotate-0 lg:translate-x-15 lg:-translate-y-8 lg:-rotate-2"
-            >
-              <div className="bg-Purple border-Dark w-full -rotate-3 overflow-hidden rounded-lg border-4 shadow-2xl">
-                {/* Image Container */}
-                <div className="relative h-60 overflow-hidden md:h-100 md:w-140 md:px-1">
-                  <img
-                    src="/About/Aditya_Mishra.png"
-                    alt="Aditya Mishra"
-                    className="h-full w-full rotate-3"
-                  />
-                </div>
-                {/* Name Label */}
-                <div className="bg-Purple px-2 py-1">
-                  <h3 className="text-Dark text-center text-6xl font-bold md:text-8xl lg:text-8xl">
-                    ADITYA MISHRA
-                  </h3>
-                </div>
-              </div>
-            </div>
-
-            {/* Anmol Dhand Card */}
-            <div
-              ref={card2Ref}
-              className="relative z-1 translate-x-6 transform transition-transform duration-300 hover:rotate-0 lg:rotate-2"
-            >
-              <div className="bg-Green border-Dark w-full rotate-3 overflow-hidden rounded-lg border-4 shadow-2xl">
-                {/* Image Container */}
-                <div className="relative h-60 overflow-hidden md:h-100 md:w-140 md:px-1">
-                  <img
-                    src="/About/Anmol_Dhand.png"
-                    alt="Anmol Dhand"
-                    className="h-full w-full -rotate-2"
-                  />
-                </div>
-                {/* Name Label */}
-                <div className="bg-Green px-2 py-1">
-                  <h3 className="text-Yellow text-center text-6xl font-bold md:text-8xl lg:text-8xl">
-                    ANMOL DHAND
-                  </h3>
-                </div>
-              </div>
-            </div>
+            
+            {devs.map((dev, index) => (
+              <AboutDevsCard key={dev.name} dev={dev} index={index} />
+            ))}
           </div>
 
           {/* Company Description */}
