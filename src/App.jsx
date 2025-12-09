@@ -14,6 +14,7 @@ import Originals from "./sections/Originals";
 import Clients from "./sections/Clients";
 import BarAnimation from "./sections/BarAnimation";
 import Footer from "./sections/Footer";
+import Form from "./sections/Form";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -74,6 +75,7 @@ const App = () => {
       { id: "#client-section", color: colorMap.Green },
       { id: "#originals-section", color: colorMap.Yellow },
       { id: "#footer-section", color: colorMap.Yellow },
+      { id: "#form-section", color: colorMap.Yellow },
     ];
 
     sections.forEach((s) => {
@@ -108,6 +110,7 @@ const App = () => {
       <Services id="services-section" />
       <Clients id="client-section" />
       <Originals id="originals-section" />
+      <Form id="form-section"/>
       <Footer id="footer-section" />
     </>
   );

@@ -68,8 +68,8 @@ function TeamSection({ id }) {
         <>
             {/* interval/break for upper section */}
             {/* <div className="w-full h-[80vh]"></div> */}
-            <div id={id} className="bg-Yellow flex z-10 h-screen items-center px-4 pb-12 md:pb-20">
-                <div id={id} className=" bg-Yellow z-1 pt-[10vh] mx-auto w-full">
+            <div id={id} className="bg-Yellow flex z-10 md:h-screen items-center px-4 pb-12 md:pb-20">
+                <div id={id} className=" bg-Yellow z-1 md:pt-[10vh] mx-auto w-full">
                     {/* Team Cards Container */}
                     <div className="flex bg- -translate-x-3 flex-col items-center justify-center gap-8 lg:flex-row lg:items-start lg:justify-center">
 

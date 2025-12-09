@@ -235,7 +235,7 @@ const HeroLogo = ({color}) => {
 
         if (svg) {
             gsap.to(svg.querySelectorAll("polygon, rect"), {
-                fill: (color == "Dark") ?"#1A2027": color,
+                fill: (color == "Dark") ? "#1A2027": color,
                 duration: 0.01, // smooth transition
                 overwrite: true
             });
