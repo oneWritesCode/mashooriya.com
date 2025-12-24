@@ -1,6 +1,10 @@
 import React from "react";
 
-const Footer = ({ id }) => {
+interface FooterProps {
+  id: string;
+}
+
+const Footer = ({ id }: FooterProps) => {
   return (
     <div
       id={id}

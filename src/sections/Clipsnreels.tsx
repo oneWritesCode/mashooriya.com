@@ -1,7 +1,9 @@
-import Instascroll from "../../public/Instascroll.png"
-import SwipeUp from "../../public/SwipeUp.png"
 
-function Clipsnreels({ id }) {
+interface ClipsnreelsProps {
+  id: string;
+}
+
+function Clipsnreels({ id }: ClipsnreelsProps) {
     return (
         <div className="relative overflow-hidden">
             <div
@@ -20,8 +22,8 @@ function Clipsnreels({ id }) {
 
                 <div className="w-full flex items-center justify-center relative ">
                     <div className="relative w-[200px] sm:w-[250px] md:w-[400px] lg:[500px] -translate-y-10 ">
-                        <img src={Instascroll} alt="" className="w-full h-full" />
-                        <img src={SwipeUp} alt="" className="absolute md:bottom-10 sm:bottom-6 sm:-right-30 bottom-4 -right-25 md:-right-50 w-[80px] sm:w-[100px] md:w-[140px] lg:w-[170px] " />
+                        <img src="/Instascroll.png" alt="" className="w-full h-full" />
+                        <img src="/SwipeUp.png" alt="" className="absolute md:bottom-10 sm:bottom-6 sm:-right-30 bottom-4 -right-25 md:-right-50 w-[80px] sm:w-[100px] md:w-[140px] lg:w-[170px] " />
                     </div>
                 </div>
 

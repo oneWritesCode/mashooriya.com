@@ -1,6 +1,10 @@
-export default function Form() {
+interface FormProps {
+  id?: string;
+}
+
+export default function Form({ id = "form-section" }: FormProps) {
   return (
-    <div className="relative bg-Yellow min-h-screen flex justify-center items-start p-4 sm:p-6 md:p-10 overflow-hidden">
+    <div id={id} className="relative bg-Yellow min-h-screen flex justify-center items-start p-4 sm:p-6 md:p-10 overflow-hidden">
       
       {/* Background shape */}
       <div className="pointer-events-none absolute -inset-1 bg-Dark 
