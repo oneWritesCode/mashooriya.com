@@ -50,7 +50,7 @@ const cardData = [
 
 export default function OurClientSays({id}:OurClientSaysPropType) {
    return (
-    <div className="min-h-screen bg-Dark flex items-center justify-center px-4 py-12">
+    <div className="min-h-screen bg-Dark flex items-center justify-center px-4 py-12 overflow-hidden">
       <div className="max-w-6xl w-full">
         <h1 className="text-[4rem] sm:text-[8rem] md:text-[9rem] lg:text-[11rem] font-black text-yellow-100 text-center mb-16 tracking-tight leading-[0.8]">
           WHAT OUR<br />CLIENT SAYS!
