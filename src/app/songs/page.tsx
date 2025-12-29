@@ -1,9 +1,47 @@
+// "use client"
+// import { useState, useEffect } from "react";
+import Loader from "@/components/Loader";
+import HeroLogo from "@/components/HeroLogo";
+import NavBar from "@/components/NavBar";
 import SongCard from "@/components/SongCard";
+import Footer from "@/sections/Footer";
+import Hero from "@/sections/Hero";
 
 function page() {
+  // const [isLoading, setIsLoading] = useState(true);
+  
+     
+  // useEffect(() => {
+  //   const handleLoad = () => {
+  //     setTimeout(() => {
+  //       setIsLoading(false);
+  //       }, 300);
+  //     };
+
+    
+  //   if (document.readyState === "complete") {
+  //     handleLoad();
+  //   } else {
+  //     window.addEventListener("load", handleLoad);
+  //     return () => window.removeEventListener("load", handleLoad);
+  //   }
+
+  // }, [])
+
   return (
-    <div className="bg-Yellow px-4 pt-10 md:p-[10vh] "> 
-    <SongCard cardOnSong="gap-4" noRotate={true} />
+    <div className=""> 
+      <Loader />
+      <NavBar/>
+      <HeroLogo color="Yellow"/>
+      <Hero id="hero-section"/>
+      <div className='bg-Dar absolute bg-linear-to-b from-[#1A2027]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>
+      <div className="relative w-full py-10 bg-Dark  flex flex-col items-center justify-center gap-12">
+        <div className='w-full flex items-center justify-center'>
+          <div className="absolute -left-10 w-60 md:w-100 lg:w-220 z-1000 h-full bg-gradient-to-r from-[#1A2027] via-Dark/80 to-transparent backdrop-blue-xl blur-md "></div>
+      <SongCard cardOnSong="gap-4" noRotate={true} />
+        </div>
+      </div>
+      <Footer id="footer-section"/>
     </div>
   )
 }

@@ -18,6 +18,7 @@ import Form from "@/sections/Form";
 import Clipsnreels from "@/sections/Clipsnreels";
 import SongCard from "@/components/SongCard";
 import OurClientSays from "@/sections/OurClientSays";
+import NavBar from "@/components/NavBar";
 
 gsap.registerPlugin(ScrollTrigger);
 
@@ -108,6 +109,7 @@ const Page = () => {
       <div className="h-screen">
         <HeroLogo color={logoColor} />
         <Hero id="hero" />
+        <NavBar/>
       </div>
 
       <Numbers id="numbers-section" />

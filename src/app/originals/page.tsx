@@ -1,14 +1,39 @@
+// "use client"
+// import { useEffect, useState } from "react";
+import Loader from "@/components/Loader";
 import HeroLogo from '@/components/HeroLogo'
+import NavBar from '@/components/NavBar'
 import SongCard from '@/components/SongCard'
 import Hero from '@/sections/Hero'
 import Link from 'next/link'
 
 function page() {
+// const [isLoading, setIsLoading] = useState(true);
+  
+// useEffect(() => {
+//  const handleLoad = () => {
+//     setTimeout(() => {
+//       setIsLoading(false);
+//       }, 300);
+//     };
+
+
+//     if (document.readyState === "complete") {
+//       handleLoad();
+//     } else {
+//       window.addEventListener("load", handleLoad);
+//       return () => window.removeEventListener("load", handleLoad);
+//     }
+
+// }, [])
+
+
   return (
     <div>
-
+      <Loader />
       <HeroLogo color="Yellow"/>
       <Hero id="hero-section"/>
+      <NavBar/>
       <div className='bg-Dar absolute bg-linear-to-b from-[#1A202]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>
       <div className="relative w-full min-h-screen bg-Dark  flex flex-col items-center justify-center gap-12">
         <div className=' flex items-center justify-center'>

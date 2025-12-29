@@ -17,16 +17,16 @@ export default async function SongCard({ limit, cardOnSong  , id ,noRotate,class
   const visibleSongs = limit ? songs.slice(0, limit) : songs;
 
   return (
-<div className={`w-full flex items-center justify-center flex-wrap ${cardOnSong}`}>
-
+<div className={`relative w-full flex items-center overflow-y-hidden [&::-webkit-scrollbar]:w-12 overflow-x-auto ${limit && "flex-wrap justify-center"} ${!limit && "pl-30 md:pl-50 lg:pl-110"} ${cardOnSong}`}>
 
       {visibleSongs.map((song: any, index:number) => {
 
         const rotation =  noRotate ? 0 : index === 0 ? 2 : index === 1 ? -2 : 1;
         const classes =  classToApply;
+        const isLimited = limit
 
         return(
-        <div key={song.id} style={{ marginBottom: 20 }} className=" w- ">
+        <div key={song.id} style={{ marginBottom: 20 }} className=" ">
           <ViralSongsCard
             image={song.image}
             songName={song.name}
@@ -35,6 +35,7 @@ export default async function SongCard({ limit, cardOnSong  , id ,noRotate,class
             rotation={rotation}
             simple={true}
             classes={classes}
+            isLimited
             />
             </div>
         )
