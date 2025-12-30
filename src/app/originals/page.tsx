@@ -1,37 +1,16 @@
-// "use client"
-// import { useEffect, useState } from "react";
 import Loader from "@/components/Loader";
 import HeroLogo from '@/components/HeroLogo'
 import NavBar from '@/components/NavBar'
 import SongCard from '@/components/SongCard'
 import Hero from '@/sections/Hero'
 import Link from 'next/link'
+import ClientComponent from "@/components/ClientComponent";
 
 function page() {
-// const [isLoading, setIsLoading] = useState(true);
-  
-// useEffect(() => {
-//  const handleLoad = () => {
-//     setTimeout(() => {
-//       setIsLoading(false);
-//       }, 300);
-//     };
-
-
-//     if (document.readyState === "complete") {
-//       handleLoad();
-//     } else {
-//       window.addEventListener("load", handleLoad);
-//       return () => window.removeEventListener("load", handleLoad);
-//     }
-
-// }, [])
-
 
   return (
     <div>
-      <Loader />
-      <HeroLogo color="#AF9FFF"/>
+      <ClientComponent />
       <Hero id="hero-section" themeColor="Purple"/>
       <NavBar themeColor="Purple"/>
       <div className='bg-Dar absolute bg-linear-to-b from-[#1A202]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>

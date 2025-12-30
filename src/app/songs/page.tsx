@@ -6,33 +6,13 @@ import NavBar from "@/components/NavBar";
 import SongCard from "@/components/SongCard";
 import Footer from "@/sections/Footer";
 import Hero from "@/sections/Hero";
+import ClientComponent from "@/components/ClientComponent";
 
 function page() {
-  // const [isLoading, setIsLoading] = useState(true);
-  
-     
-  // useEffect(() => {
-  //   const handleLoad = () => {
-  //     setTimeout(() => {
-  //       setIsLoading(false);
-  //       }, 300);
-  //     };
-
-    
-  //   if (document.readyState === "complete") {
-  //     handleLoad();
-  //   } else {
-  //     window.addEventListener("load", handleLoad);
-  //     return () => window.removeEventListener("load", handleLoad);
-  //   }
-
-  // }, [])
-
   return (
     <div className=""> 
-      <Loader />
+      <ClientComponent />
       <NavBar themeColor="Purple"/>
-      <HeroLogo color="#AF9FFF"/>
       <Hero id="hero-section" themeColor="Purple"/>
       <div className='bg-Dar absolute bg-linear-to-b from-[#1A2027]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>
       <div className="relative w-full py-10 bg-Dark  flex flex-col items-center justify-center gap-12">
