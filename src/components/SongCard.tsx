@@ -1,7 +1,6 @@
 import { getPlaylistSongs } from "@/app/lib/spotify";
-import ViralSongsCard from "../components/ViralSongsCard";
+import ViralSongsCard3 from "../components/ViralSongsCard3";
 import ViralSongsCard2 from "../components/ViralSongsCard2";
-import Viral from "@/sections/Viral";
 
 type SongCardProps = {
   limit?: number;
@@ -19,23 +18,15 @@ export default async function SongCard({ limit, cardOnSong  , id ,noRotate,class
 
   if(!limit){
     return(
-   <div className={`relative w-full flex items-center overflow-y-hidden [&::-webkit-scrollbar]:w-12 overflow-x-auto ${limit && "flex-wrap justify-center"} ${!limit && "pl-30 md:pl-50 lg:pl-110"} ${cardOnSong}`}>
+   <div className={`relative w-full flex items-center overflow-y-hidden [&::-webkit-scrollbar]:w-12 overflow-x-auto pl-30 md:pl-50 lg:pl-110 gap-4`}>
       {visibleSongs.map((song: any, index:number) => {
 
-        const rotation =  noRotate ? 0 : index === 0 ? 2 : index === 1 ? -2 : 1;
-        const classes =  classToApply;
-        const isLimited = limit
         return(
-        <div key={song.id} style={{ marginBottom: 20 }} className=" ">
-          <ViralSongsCard
+        <div key={song.id} className="gap-4">
+          <ViralSongsCard3
             image={song.image}
             songName={song.name}
             artistName={song.artists}
-            bgColor="var(--Purple)"
-            rotation={rotation}
-            simple={true}
-            classes={classes}
-            isLimited
             />
             </div>
         )
@@ -57,11 +48,7 @@ export default async function SongCard({ limit, cardOnSong  , id ,noRotate,class
             image={song.image}
             songName={song.name}
             artistName={song.artists}
-            bgColor="var(--Purple)"
             rotation={rotation}
-            simple={true}
-            classes={classes}
-            isLimited
             />
             </div>
         )

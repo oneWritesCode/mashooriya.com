@@ -18,6 +18,7 @@ function NavBarFn(){
 }
 
 const bgColor = themeColor === "Purple" ? "bg-Purple" : "bg-Yellow"
+const hoverBgColor = themeColor === "Purple" ? "hover:bg-Purple" : "hover:bg-Yellow"
 const textColor = themeColor === "Purple" ? "text-Purple" : "text-Yellow"
 
   return (
@@ -33,14 +34,14 @@ const textColor = themeColor === "Purple" ? "text-Purple" : "text-Yellow"
           <Link 
           href="/"   
           onClick={NavBarFn} 
-          className={`${pathname === '/' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '/' ? `${bgColor} text-Dark`:`${hoverBgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
           >
             Home
           </Link>
           <Link 
           href="/#about-section" 
           onClick={NavBarFn} 
-          className={`${pathname === '/#about-section' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '/#about-section' ? `${bgColor} text-Dark`:`${hoverBgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
 
           >
            About us
@@ -48,7 +49,7 @@ const textColor = themeColor === "Purple" ? "text-Purple" : "text-Yellow"
           <Link 
           href="/#services-section" 
           onClick={NavBarFn} 
-          className={`${pathname === '/#services-section' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border- border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '/#services-section' ? `${bgColor} text-Dark`:`${hoverBgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border- border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
 
            >
             services
@@ -56,13 +57,16 @@ const textColor = themeColor === "Purple" ? "text-Purple" : "text-Yellow"
           <Link 
           href="/#form-section" 
           onClick={NavBarFn} 
-          className={`${pathname === '#form-section' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border- border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '#form-section' ? `${bgColor} text-Dark`:`${hoverBgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border- border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
 
           >
             contact
           </Link>
-          <div className="absolute w-full flex flex-col items-center justify-center bottom-10 text-Yellow leading-[1.2] text-sm uppercase md:text-medium font-bold">
-            <img src="/logo.svg" alt="dark icon" className="w-[30%]" />
+          <div className={`absolute w-full flex flex-col items-center justify-center bottom-10 leading-[1.2] text-sm uppercase md:text-medium font-bold ${textColor}`}>
+            {themeColor === "Purple" ? 
+            <img src="/logoPurple.svg" alt="dark icon" className="w-[30%]" />:<img src="/logo.svg" alt="dark icon" className="w-[30%]" />
+            }
+
             <p className="-translate-x-2">mashooriya | mashoor soon</p>
           </div>
        </div>
@@ -71,8 +75,8 @@ const textColor = themeColor === "Purple" ? "text-Purple" : "text-Yellow"
        onClick={NavBarFn}
        className={`fixed top-10 right-10 h-12 w-12 cursor-pointer flex flex-col item-center justify-center gap-0.5 p-2 z-1000 `}
        >
-          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "relative top-2.5 rotate-45"} `}></div>
-          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "relative top-0.5 -rotate-45"} `}></div>
+          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "border-0 relative top-2.5 rotate-45"} `}></div>
+          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "border-0 relative top-0.5 -rotate-45"} `}></div>
           <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "opacity-0"} `}></div>
        </button>
 

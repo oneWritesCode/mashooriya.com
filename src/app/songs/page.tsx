@@ -38,7 +38,7 @@ function page() {
       <div className="relative w-full py-10 bg-Dark  flex flex-col items-center justify-center gap-12">
         <div className='w-full flex items-center justify-center'>
           <div className="absolute -left-10 w-60 md:w-100 lg:w-220 z-1000 h-full bg-gradient-to-r from-[#1A2027] via-Dark/80 to-transparent backdrop-blue-xl blur-md "></div>
-      <SongCard cardOnSong="gap-4" noRotate={true} />
+      <SongCard />
         </div>
       </div>
       {/* <Footer id="footer-section"/> */}

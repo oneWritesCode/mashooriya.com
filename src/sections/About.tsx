@@ -19,7 +19,7 @@ const About = ({ id }: AboutProps) => {
     const devs = [
         {
             name: "Aditya Mishra",
-            image: "/About/Aditya_Mishra.png",
+            image: "/About/Aditya.jpeg",
             cardClasses: "sm:-translate-y-6 sm:translate-x-10 translate-y-20",
             bg: "bg-Purple",
             border: "border-Dark",
@@ -31,7 +31,7 @@ const About = ({ id }: AboutProps) => {
         },
         {
             name: "Anmol Dhand",
-            image: "/About/Anmol_Dhand.png",
+            image: "/About/Anmol.jpeg",
             cardClasses: "sm:translate-x-10 translate-x-5 sm:-translate-y-20 md:-translate-y-10 translate-y-5",
             bg: "bg-Green",
             border: "border-Dark",

@@ -43,7 +43,7 @@ function AboutDevsCard({ dev, index }: AboutDevsCardProps) {
               <div
                 className="relative border-4 border-black overflow-hidden h-60 sm:h-75 md:h-80 lg:h-95 w-full"
               >
-                <img src={dev.image} alt={dev.name} className="h-full w-full md:w-full object-fit min-w-97" />
+                <img src={dev.image} alt={dev.name} className="h-[101%] w-full md:w-[105%] object-fit min-w-97" />
               </div>
 
               <div className={`${dev.bg} px-2 py-1`}>

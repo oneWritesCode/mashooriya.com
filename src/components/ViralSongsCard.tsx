@@ -17,19 +17,16 @@ const ViralSongsCard = ({
   image,
   rotation,
   bgColor = "var(--Green)",
-  simple,
   classes,
-  isLimited
 }: ViralSongsCardProps) => {
   return (
     <div
-      className={`font-khand text-Dark border-Dark relative  ${isLimited && simple && "min-w-50 sm:min-w-80 md:min-w-90 lg:min-w-100"} overflow-hidden px-4 py-8 text-center font-bold tracking-tight backdrop-blur-sm ${classes}`}
+      className={`font-khand text-Dark border-Dark relative overflow-hidden px-4 py-8 text-center font-bold tracking-tight backdrop-blur-sm ${classes}`}
       style={{ backgroundColor: bgColor,
         transform: `rotate(${rotation || 0}deg)`,
       }}
     >
       
-      {!simple &&(
         <div className="top-0 flex w-full h-full items-end justify-start  ">
                 <div
                   className={`w-full ${
@@ -66,7 +63,6 @@ const ViralSongsCard = ({
           </div>
         </div>
        </div>
-      )}
 
 
 {/* image section */}
@@ -84,7 +80,7 @@ const ViralSongsCard = ({
               :"from-Purple via-Purple/90 to-Purple/0 bg-linear-to-t"
           }`}
         >
-          {!simple? (
+          {/* {!simple? ( */}
           <div
             className="mb-2 h-full text-left leading-[0.7] uppercase"
             style={{
@@ -97,7 +93,7 @@ const ViralSongsCard = ({
               <p>spotify india</p>
             </span>
           </div>
-          ):(
+          {/* ):(
           <div className="top-0 flex w-full h-full items-end justify-start  ">
               <div
                 className={`w-full ${
@@ -137,7 +133,7 @@ const ViralSongsCard = ({
         </div>
        </div>
 
-          )}
+          )} */}
           {/* <div
             className="mb-2 h-full text-left leading-[0.7] uppercase"
             style={{
