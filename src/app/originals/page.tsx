@@ -31,7 +31,7 @@ function page() {
   return (
     <div>
       <Loader />
-      <HeroLogo color="Purple"/>
+      <HeroLogo color="#AF9FFF"/>
       <Hero id="hero-section" themeColor="Purple"/>
       <NavBar themeColor="Purple"/>
       <div className='bg-Dar absolute bg-linear-to-b from-[#1A202]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>
