@@ -39,8 +39,8 @@ function page() {
         <div className=' flex items-center justify-center'>
             <SongCard limit={3} classToApply="border"/>
         </div>
-            <Link href="/songs" className='bg-Purple text-Dark font-bold p-2 md:p-4 text-xl md:text-2xl uppercase'>explore more</Link>
-            <div className='bg-Purple w-full text-center font-bold p-2 md:p-4 absolute bottom-0 left-0 text-Dark uppercase text-2xl md:text-4xl '>all rights reserved by mashooriya </div>
+        <Link href="/songs" className='bg-Purple text-Dark font-bold p-2 md:p-4 text-xl md:text-2xl mb-40 uppercase'>explore more</Link>
+        <div className='bg-Purple w-full text-center font-bold p-2 md:p-4 absolute bottom-0 left-0 text-Dark uppercase text-2xl md:text-4xl '>all rights reserved by mashooriya </div>
       </div>
     </div>
   )
