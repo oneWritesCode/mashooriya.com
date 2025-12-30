@@ -44,17 +44,17 @@ const Hero = ({ id , themeColor}: HeroProps) => {
 
          <div className='absolute z-100 bottom-0 left-0 w-full pb-4 md:pb-6 flex flex-col items-center justify-center uppercase'>
             
-            <div className='relative flex items-center gap-4 bg-white/10 p-0 md:p-2 '>
+          <div className='relative flex items-center gap-4 bg-white/10 p-2 '>
            <div className={`absolute -top-8 -left-2 -rotate-2 bg-${themeColor} px-4 text-xl md:text-2xl tracking-tight text-Dark font-semibold`}>latest</div>
-                <div> <img src="/albumart.png" alt="" /> </div>
-                <div className='md:text-2xl text-xl md:tracking-normal tracking-tighter leading-[0.9] font-semibold'>
-                    <p>khamma ghanni</p>
-                    <span>the u.d, AAduz</span>
+                <div> <img src="/albumart.png" alt="" className="w-12"/> </div>
+                <div className={`text-${themeColor}  md:tracking-normal tracking-tighter leading-[0.8] font-bold`}>
+                    <p className="md:text-2xl text-xl ">khamma ghanni</p>
+                    <span className="text-2sm ">the u.d, AAduz</span>
                 </div>
                 <div>
                     <Link href="https://open.spotify.com/track/459tc67J7MQlP0r0JWlu5g?si=athFYm3UQ_a0tcJZfWPDRA">
-                    <span className={`md:w-20 w-12 h-12 md:h-20 flex items-center justify-around ${themeColor==="Purple"? "bg-Purple/50":"bg-Yellow/50"} rounded-full md:p-2`}>
-                        <span className={`md:w-15 w-10 md:h-15 h-10 bg-${themeColor} rounded-full flex items-center justify-center  text-Dark text-md md:text-2xl font-semibold`}>play</span>
+                    <span className={`md:w-12 mr-2 w-9 h-9 md:h-12 flex items-center justify-around ${themeColor==="Purple"? "bg-Purple/50":"bg-Yellow/50"} rounded-full`}>
+                        <span className={`md:w-9 w-7 md:h-9 h-7 bg-${themeColor} rounded-full flex items-center justify-center  text-Dark text-[0.6rem] md:text-[1rem] font-bold`}>play</span>
                     </span>
                     </Link>
                 </div>
