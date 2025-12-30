@@ -31,9 +31,9 @@ function page() {
   return (
     <div>
       <Loader />
-      <HeroLogo color="Yellow"/>
-      <Hero id="hero-section"/>
-      <NavBar/>
+      <HeroLogo color="Purple"/>
+      <Hero id="hero-section" themeColor="Purple"/>
+      <NavBar themeColor="Purple"/>
       <div className='bg-Dar absolute bg-linear-to-b from-[#1A202]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>
       <div className="relative w-full min-h-screen bg-Dark  flex flex-col items-center justify-center gap-12">
         <div className=' flex items-center justify-center'>

@@ -31,9 +31,9 @@ function page() {
   return (
     <div className=""> 
       <Loader />
-      <NavBar/>
-      <HeroLogo color="Yellow"/>
-      <Hero id="hero-section"/>
+      <NavBar themeColor="Purple"/>
+      <HeroLogo color="Purple"/>
+      <Hero id="hero-section" themeColor="Purple"/>
       <div className='bg-Dar absolute bg-linear-to-b from-[#1A2027]/10 via-Dark/60 to-Dark w-full h-25 -translate-y-25 z-10'></div>
       <div className="relative w-full py-10 bg-Dark  flex flex-col items-center justify-center gap-12">
         <div className='w-full flex items-center justify-center'>
@@ -41,7 +41,7 @@ function page() {
       <SongCard cardOnSong="gap-4" noRotate={true} />
         </div>
       </div>
-      <Footer id="footer-section"/>
+      {/* <Footer id="footer-section"/> */}
     </div>
   )
 }

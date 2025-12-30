@@ -108,8 +108,8 @@ const Page = () => {
       <Loader isLoading={isLoading} />
       <div className="h-screen">
         <HeroLogo color={logoColor} />
-        <Hero id="hero" />
-        <NavBar/>
+        <Hero id="hero" themeColor="Yellow"/>
+        <NavBar themeColor="Yellow"/>
       </div>
 
       <Numbers id="numbers-section" />

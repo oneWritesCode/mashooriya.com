@@ -4,7 +4,11 @@ import Link from "next/link";
 import { useState } from "react"
 import { usePathname } from 'next/navigation'
 
-export default function NavBar() {
+type NavBarPropsType = {
+  themeColor: string
+}
+
+export default function NavBar({themeColor}:NavBarPropsType) {
 const pathname = usePathname();
 
 const [isOpen, setIsOpen] = useState<boolean>(false)
@@ -12,6 +16,9 @@ const [isOpen, setIsOpen] = useState<boolean>(false)
 function NavBarFn(){
   setIsOpen(!isOpen);
 }
+
+const bgColor = themeColor === "Purple" ? "bg-Purple" : "bg-Yellow"
+const textColor = themeColor === "Purple" ? "text-Purple" : "text-Yellow"
 
   return (
     <>
@@ -26,14 +33,14 @@ function NavBarFn(){
           <Link 
           href="/"   
           onClick={NavBarFn} 
-          className={`${pathname === '/' ? "bg-Yellow text-Dark":"hover:bg-Yellow hover:text-Dark hover:border-Dark bg-Dark text-Yellow"} transition-all duration-300 border-t py-2 border- border-t-Yellow md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '/' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
           >
             Home
           </Link>
           <Link 
           href="/#about-section" 
           onClick={NavBarFn} 
-          className={`${pathname === '/songs' ? "bg-Yellow text-Dark":"hover:bg-Yellow hover:text-Dark hover:border-Dark bg-Dark text-Yellow"} transition-all duration-300 border-t py-2 border- border-t-Yellow md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '/#about-section' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
 
           >
            About us
@@ -41,7 +48,7 @@ function NavBarFn(){
           <Link 
           href="/#services-section" 
           onClick={NavBarFn} 
-          className={`${pathname === '/originals' ? "bg-Yellow text-Dark":"hover:bg-Yellow hover:text-Dark hover:border-Dark bg-Dark text-Yellow"} transition-all duration-300 border-t py-2 border- border-t-Yellow md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '/#services-section' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border- border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
 
            >
             services
@@ -49,7 +56,7 @@ function NavBarFn(){
           <Link 
           href="/#form-section" 
           onClick={NavBarFn} 
-          className={`${pathname === '#form-section' ? "bg-Yellow text-Dark":"hover:bg-Yellow hover:text-Dark hover:border-Dark bg-Dark text-Yellow"} transition-all duration-300 border-t py-2 border- border-t-Yellow md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
+          className={`${pathname === '#form-section' ? `${bgColor} text-Dark`:`hover:${bgColor} hover:text-Dark hover:border-Dark bg-Dark ${textColor}`} transition-all duration-300 border-t py-2 border- border-t-${themeColor} md:py-2 px-4 font-black leading-[1.2] tracking-[-0.01em] text-4xl md:text-5xl text-center uppercase`}
 
           >
             contact
@@ -64,9 +71,9 @@ function NavBarFn(){
        onClick={NavBarFn}
        className={`fixed top-10 right-10 h-12 w-12 cursor-pointer flex flex-col item-center justify-center gap-0.5 p-2 z-1000 `}
        >
-          <div className={`bg-Yellow border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "relative top-2.5 rotate-45"} `}></div>
-          <div className={`bg-Yellow border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "relative top-0.5 -rotate-45"} `}></div>
-          <div className={`bg-Yellow border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "opacity-0"} `}></div>
+          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "relative top-2.5 rotate-45"} `}></div>
+          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "relative top-0.5 -rotate-45"} `}></div>
+          <div className={` ${bgColor} border border-Dark/70 h-1.5 transition-all duration-500 ${isOpen && "opacity-0"} `}></div>
        </button>
 
     {/* </div> */}
