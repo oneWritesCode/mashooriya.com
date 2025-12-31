@@ -36,7 +36,7 @@ export default async function SongCard({ limit, cardOnSong  , id ,noRotate,class
   }
 
   return (
-    <div className={`relative w-full flex items-center flex-wrap justify-center border ${cardOnSong} px-10`}>
+    <div className={`relative w-full flex items-center flex-wrap justify-center ${cardOnSong} px-10`}>
       {visibleSongs.map((song: any, index:number) => {
 
         const rotation =  index === 0 ? 2 : index === 1 ? -4 : 2;  
