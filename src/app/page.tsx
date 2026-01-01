@@ -16,7 +16,6 @@ import BarAnimation from "@/sections/BarAnimation";
 import Footer from "@/sections/Footer";
 import Form from "@/sections/Form";
 import Clipsnreels from "@/sections/Clipsnreels";
-import SongCard from "@/components/SongCard";
 import OurClientSays from "@/sections/OurClientSays";
 import NavBar from "@/components/NavBar";
 
@@ -24,24 +23,7 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Page = () => {
   const [logoColor, setLogoColor] = useState("Yellow");
-  const [isLoading, setIsLoading] = useState(true);
-
-  useEffect(() => {
-    const handleLoad = () => {
-
-      setTimeout(() => {
-        setIsLoading(false);
-      }, 300);
-    };
-
-    if (document.readyState === "complete") {
-      handleLoad();
-    } else {
-      window.addEventListener("load", handleLoad);
-      return () => window.removeEventListener("load", handleLoad);
-    }
-  }, []);
-
+  
   useEffect(() => {
     const lenis = new Lenis({
       autoRaf: false,
@@ -74,7 +56,6 @@ const Page = () => {
       { id: "#bar-section", color: colorMap.Dark },
       { id: "#viral-section", color: colorMap.Dark },
       { id: "#about-section", color: colorMap.Green },
-      // { id: "#team-section", color: colorMap.Green }, 
       { id: "#services-section", color: colorMap.Yellow },
       { id: "#client-section", color: colorMap.Green },
       { id: "#ourclientsays-section", color: colorMap.Green },
@@ -104,8 +85,7 @@ const Page = () => {
 
   return (
     <>
-      {/* <Loader isLoading={true} /> */}
-      <Loader isLoading={isLoading} />
+      <Loader />
       <div className="h-screen">
         <HeroLogo color={logoColor} />
         <Hero id="hero" themeColor="Yellow"/>
@@ -115,9 +95,7 @@ const Page = () => {
       <Numbers id="numbers-section" />
       <BarAnimation id="bar-section" />
       <Viral id="viral-section" />
-      {/* <SongCard card="viral" limit={4} id="viral-section"/> */}
       <About id="about-section" />
-      {/* <TeamSection id="team-section" /> */}
       <Services id="services-section" />
       <OurClientSays id="ourclientsays-section"/>
       <Clients id="client-section" />
