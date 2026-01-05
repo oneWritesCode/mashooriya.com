@@ -4,7 +4,7 @@ import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
 import HeroLogo from "@/components/HeroLogo";
-import Loader from "@/components/Loader";
+import Loader from "@/components/Loading";
 import Hero from "@/sections/Hero";
 import Numbers from "@/sections/Numbers";
 import Viral from "@/sections/Viral";
