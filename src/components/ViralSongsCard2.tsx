@@ -1,5 +1,4 @@
 // for /originals page
-import React from "react";
 
 interface ViralSongsCardProps2 {
   songName: string;
