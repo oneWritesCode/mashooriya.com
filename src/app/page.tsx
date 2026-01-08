@@ -1,4 +1,8 @@
+export const dynamic = "force-dynamic"
+export const revalidate = 0
+
 "use client"
+
 import { useState, useEffect ,useRef} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
@@ -22,22 +26,22 @@ import NavBar from "@/components/NavBar";
 gsap.registerPlugin(ScrollTrigger);
 
 
-let hasLoadedOnce = false
+// let hasLoadedOnce = false
 
 const Page = () => {
   const [logoColor, setLogoColor] = useState("Yellow");
   
   // FORCE RELOAD FOR WHEN USER COMES AGAIN ON THE PAGE
-  const firstLoad = useRef(true)
+  // const firstLoad = useRef(true)
 
-  useEffect(() => {
-    if (!firstLoad.current) {
-      window.location.reload()
-      return
-    }
+  // useEffect(() => {
+  //   if (!firstLoad.current) {
+  //     window.location.reload()
+  //     return
+  //   }
 
-    firstLoad.current = false
-  }, [])
+  //   firstLoad.current = false
+  // }, [])
   
   useEffect(() => {
     const lenis = new Lenis({
