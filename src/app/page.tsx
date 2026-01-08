@@ -1,5 +1,5 @@
 "use client"
-import { useState, useEffect } from "react";
+import { useState, useEffect ,useRef} from "react";
 import { gsap } from "gsap";
 import { ScrollTrigger } from "gsap/ScrollTrigger";
 import Lenis from "lenis";
@@ -23,6 +23,18 @@ gsap.registerPlugin(ScrollTrigger);
 
 const Page = () => {
   const [logoColor, setLogoColor] = useState("Yellow");
+  
+  // FORCE RELOAD FOR WHEN USER COMES AGAIN ON THE PAGE
+  const firstLoad = useRef(true)
+
+  useEffect(() => {
+    if (!firstLoad.current) {
+      window.location.reload()
+      return
+    }
+
+    firstLoad.current = false
+  }, [])
   
   useEffect(() => {
     const lenis = new Lenis({
