@@ -16,7 +16,7 @@ const BarAnimation = ({ id }: BarAnimationProps) => {
   useGSAP(() => {
 
     const ctx = gsap.context(() => {
-//to clean all the scroll memory so animation runs everytme neatly
+    //to clean all the scroll memory so animation runs everytme neatly
     ScrollTrigger.clearScrollMemory()
 
     const bars = barsRef.current;
