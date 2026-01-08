@@ -21,6 +21,9 @@ import NavBar from "@/components/NavBar";
 
 gsap.registerPlugin(ScrollTrigger);
 
+
+let hasLoadedOnce = false
+
 const Page = () => {
   const [logoColor, setLogoColor] = useState("Yellow");
   
