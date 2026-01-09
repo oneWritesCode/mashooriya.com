@@ -58,14 +58,19 @@ const Page = () => {
   useEffect(() => {
     if (process.env.NODE_ENV !== "production") return
 
-    const visited = sessionStorage.getItem("visited-home")
+    const hasVisited = sessionStorage.getItem("visited-home")
+    const hasReloaded = sessionStorage.getItem("home-reloaded")
 
-    if (visited) {
+    // Case 1: coming back, reload once
+    if (hasVisited && !hasReloaded) {
+      sessionStorage.setItem("home-reloaded", "true")
       window.location.reload()
       return
     }
 
+    // Case 2: first time OR after reload → reset state
     sessionStorage.setItem("visited-home", "true")
+    sessionStorage.removeItem("home-reloaded")
   }, [])
 
   
